@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "EIRlmtlPIhgbzmkDVu7i+33bTvv2oxDvfZ3RfsMbYS6dyg0yomlM0mrok2I3Kociw6tWMGItGp6Msh37vd4D+A==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\Repos\\stellar_combat\\stellar_combat_tests\\stellar_combat_tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Daria\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\microsoft.codecoverage\\17.4.0\\microsoft.codecoverage.17.4.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\microsoft.net.test.sdk\\17.4.0\\microsoft.net.test.sdk.17.4.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.4.0\\microsoft.testplatform.objectmodel.17.4.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\microsoft.testplatform.testhost\\17.4.0\\microsoft.testplatform.testhost.17.4.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\moq\\4.18.3\\moq.4.18.3.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nunit.console\\3.16.0\\nunit.console.3.16.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nunit.consolerunner\\3.16.0\\nunit.consolerunner.3.16.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nunit.extension.nunitprojectloader\\3.6.0\\nunit.extension.nunitprojectloader.3.6.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nunit.extension.nunitv2driver\\3.8.0\\nunit.extension.nunitv2driver.3.8.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nunit.extension.nunitv2resultwriter\\3.6.0\\nunit.extension.nunitv2resultwriter.3.6.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nunit.extension.teamcityeventlistener\\1.0.7\\nunit.extension.teamcityeventlistener.1.0.7.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nunit.extension.vsprojectloader\\3.8.0\\nunit.extension.vsprojectloader.3.8.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\nunit3testadapter\\4.3.1\\nunit3testadapter.4.3.1.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+    "C:\\Users\\Daria\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
