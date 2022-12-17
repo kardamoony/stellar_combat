@@ -2,9 +2,9 @@
 {
     public static class FloatExtensions
     {
-        public static bool Approximately(this float thisValue, float value)
+        public static bool IsValidNumber(this float thisValue)
         {
-            return Math.Abs(thisValue - value) < float.Epsilon;
+            return !float.IsInfinity(thisValue) && !float.IsNaN(thisValue);
         }
     }
 }
