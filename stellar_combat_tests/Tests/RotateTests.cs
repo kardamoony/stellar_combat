@@ -28,7 +28,11 @@ public class RotateTests
         rotateCmd.Execute();
 
         var expectedDirection = new Vector2(0f, -1f);
-        Assert.AreEqual(expectedDirection, rotatableMock.Direction);
+
+        var areEqual = MathF.Abs(expectedDirection.X - rotatableMock.Direction.X) < float.Epsilon
+                       && MathF.Abs(expectedDirection.Y - rotatableMock.Direction.Y) < float.Epsilon;
+        
+        Assert.IsTrue(areEqual);
     }
     
     [Test]
@@ -45,7 +49,10 @@ public class RotateTests
         rotateCmd.Execute();
 
         var expectedDirection = Vector2.UnitY;
-        Assert.AreEqual(expectedDirection, rotatableMock.Direction);
+        var areEqual = MathF.Abs(expectedDirection.X - rotatableMock.Direction.X) < float.Epsilon
+                       && MathF.Abs(expectedDirection.Y - rotatableMock.Direction.Y) < float.Epsilon;
+        
+        Assert.IsTrue(areEqual);
     }
 
     [Test]
@@ -62,7 +69,10 @@ public class RotateTests
         rotateCmd.Execute();
 
         var expectedDirection = Vector2.UnitX;
-        Assert.AreEqual(expectedDirection, rotatableMock.Direction);
+        var areEqual = MathF.Abs(expectedDirection.X - rotatableMock.Direction.X) < float.Epsilon
+                       && MathF.Abs(expectedDirection.Y - rotatableMock.Direction.Y) < float.Epsilon;
+        
+        Assert.IsTrue(areEqual);
     }
     
     [Test]
@@ -79,7 +89,10 @@ public class RotateTests
         rotateCmd.Execute();
 
         var expectedDirection = Vector2.UnitX;
-        Assert.AreEqual(expectedDirection, rotatableMock.Direction);
+        var areEqual = MathF.Abs(expectedDirection.X - rotatableMock.Direction.X) < float.Epsilon
+                       && MathF.Abs(expectedDirection.Y - rotatableMock.Direction.Y) < float.Epsilon;
+        
+        Assert.IsTrue(areEqual);
     }
     
     [Test]
@@ -96,7 +109,10 @@ public class RotateTests
         rotateCmd.Execute();
 
         var expectedDirection = Vector2.UnitX;
-        Assert.AreEqual(expectedDirection, rotatableMock.Direction);
+        var areEqual = MathF.Abs(expectedDirection.X - rotatableMock.Direction.X) < float.Epsilon
+                       && MathF.Abs(expectedDirection.Y - rotatableMock.Direction.Y) < float.Epsilon;
+        
+        Assert.IsTrue(areEqual);
     }
     
     [Test]

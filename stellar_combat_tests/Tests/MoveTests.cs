@@ -32,8 +32,11 @@ internal class MoveTests
         var moveCmd = new Move(movableMock);
             
         moveCmd.Execute();
+
+        var areEqual = MathF.Abs(expectedPosition.X - movableMock.Position.X) < float.Epsilon 
+                     && MathF.Abs(expectedPosition.Y - movableMock.Position.Y) < float.Epsilon ;
         
-        Assert.AreEqual(expectedPosition, movableMock.Position);
+        Assert.IsTrue(areEqual);
     }
     
     [Test]
@@ -54,7 +57,10 @@ internal class MoveTests
             
         moveCmd.Execute();
         
-        Assert.AreEqual(expectedPosition, movableMock.Position);
+        var areEqual = MathF.Abs(expectedPosition.X - movableMock.Position.X) < float.Epsilon 
+                             && MathF.Abs(expectedPosition.Y - movableMock.Position.Y) < float.Epsilon;
+                
+        Assert.IsTrue(areEqual);
     }
     
     [Test]
@@ -75,7 +81,10 @@ internal class MoveTests
             
         moveCmd.Execute();
         
-        Assert.AreEqual(expectedPosition, movableMock.Position);
+        var areEqual = MathF.Abs(expectedPosition.X - movableMock.Position.X) < float.Epsilon 
+                       && MathF.Abs(expectedPosition.Y - movableMock.Position.Y) < float.Epsilon;
+                
+        Assert.IsTrue(areEqual);
     }
     
     [Test]
@@ -94,7 +103,10 @@ internal class MoveTests
             
         moveCmd.Execute();
         
-        Assert.AreEqual(startPosition, movableMock.Position);
+        var areEqual = MathF.Abs(startPosition.X - movableMock.Position.X) < float.Epsilon 
+                       && MathF.Abs(startPosition.Y - movableMock.Position.Y) < float.Epsilon;
+                
+        Assert.IsTrue(areEqual);
     }
     
     [Test]
@@ -115,7 +127,10 @@ internal class MoveTests
             
         moveCmd.Execute();
         
-        Assert.AreEqual(expectedPosition, movableMock.Position);
+        var areEqual = MathF.Abs(expectedPosition.X - movableMock.Position.X) < float.Epsilon 
+                       && MathF.Abs(expectedPosition.Y - movableMock.Position.Y) < float.Epsilon;
+        
+        Assert.IsTrue(areEqual);
     }
     
     [Test]
