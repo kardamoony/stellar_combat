@@ -2,6 +2,10 @@ stellar_combat_tests/bin
 stellar_combat_tests/obj
 
 stellar_combat/obj
+stellar_combat/bin/Debug/net6.0/stellar_combat.exe
+stellar_combat/bin/Debug/net6.0/stellar_combat.pdb
+stellar_combat/bin/Debug/net6.0/stellar_combat.runtimeconfig.json
+stellar_combat/bin/Debug/net6.0/stellar_combat.deps.json
 
 # User-specific stuff
 .idea/**/workspace.xml
