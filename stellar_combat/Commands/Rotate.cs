@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using StellarCombat.ExceptionHandling.Exceptions;
 using StellarCombat.Extensions;
 using StellarCombat.Interfaces;
 
@@ -17,7 +18,7 @@ namespace StellarCombat.Commands
         {
             if (!ValidateRotatable())
             {
-                throw new ArgumentException();
+                throw new CommandException(this);
             }
             
             var matrix = Matrix3x2.CreateRotation(_rotatable.AngularVelocity);

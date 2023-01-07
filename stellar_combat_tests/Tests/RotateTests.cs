@@ -2,6 +2,7 @@
 using Moq;
 using NUnit.Framework;
 using StellarCombat.Commands;
+using StellarCombat.ExceptionHandling.Exceptions;
 using StellarCombat.Interfaces;
 
 [TestFixture]
@@ -133,7 +134,7 @@ public class RotateTests
 
         var rotateCmd = new Rotate(rotatableMock);
 
-        Assert.Throws<ArgumentException>(() => rotateCmd.Execute());
+        Assert.Throws<CommandException>(() => rotateCmd.Execute());
     }
     
     [Test]
@@ -147,7 +148,7 @@ public class RotateTests
 
         var rotateCmd = new Rotate(rotatableMock);
 
-        Assert.Throws<ArgumentException>(() => rotateCmd.Execute());
+        Assert.Throws<CommandException>(() => rotateCmd.Execute());
     }
     
     [Test]
@@ -161,7 +162,7 @@ public class RotateTests
 
         var rotateCmd = new Rotate(rotatableMock);
 
-        Assert.Throws<ArgumentException>(() => rotateCmd.Execute());
+        Assert.Throws<CommandException>(() => rotateCmd.Execute());
     }
     
     [Test]
@@ -175,7 +176,7 @@ public class RotateTests
 
         var rotateCmd = new Rotate(rotatableMock);
 
-        Assert.Throws<ArgumentException>(() => rotateCmd.Execute());
+        Assert.Throws<CommandException>(() => rotateCmd.Execute());
     }
     
     [Test]
@@ -189,7 +190,7 @@ public class RotateTests
 
         var rotateCmd = new Rotate(rotatableMock);
 
-        Assert.Throws<ArgumentException>(() => rotateCmd.Execute());
+        Assert.Throws<CommandException>(() => rotateCmd.Execute());
     }
     
     [Test]
@@ -203,6 +204,6 @@ public class RotateTests
 
         var rotateCmd = new Rotate(rotatableMock);
 
-        Assert.Throws<ArgumentException>(() => rotateCmd.Execute());
+        Assert.Throws<CommandException>(() => rotateCmd.Execute());
     }
 }
