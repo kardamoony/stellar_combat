@@ -2,6 +2,7 @@
 
 namespace StellarCombat.Commands
 {
+    //Macro command for "SOLID and Exception Hanlding" assignment (lecture #7)
     public class Macro : ICommand
     {
         private readonly Commander _commander;

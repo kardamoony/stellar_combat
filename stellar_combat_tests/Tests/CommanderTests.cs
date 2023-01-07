@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using Moq;
 using StellarCombat;
+using StellarCombat.Commands;
 using StellarCombat.Interfaces;
 
 [TestFixture]
@@ -69,5 +70,21 @@ public class CommanderTests
         var command1IsInQueue = commander.IsInQueue(command1);
         
         Assert.IsFalse(command0IsInQueue && command1IsInQueue);
+    }
+
+    [Test]
+    public void Commander_Enqueue_Macro_ExecuteAll_Enqueues_Commands_After_Executed()
+    {
+        var handler = Mock.Of<ICommandExceptionHandler>();
+        var commander = new Commander(handler);
+        
+        var commandMock = Mock.Of<ICommand>();
+        var macro = new Macro(commander, commandMock);
+        
+        commander.Enqueue(macro);
+        commander.ExecuteAll();
+
+        var isCommandInQueue = commander.IsInQueue(commandMock);
+        Assert.IsTrue(isCommandInQueue);
     }
 }
