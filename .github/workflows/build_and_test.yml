@@ -19,11 +19,30 @@ jobs:
         dotnet-version: 6.0.x
     - name: Restore project dependencies
       run: dotnet restore "./stellar_combat"
+      
     - name: Restore tests dependencies
       run: dotnet restore "./stellar_combat_tests"
-    - name: Build project
+      
+    - name: Restore IoC dependencies
+      run: dotnet restore "./IoC"
+      
+    - name: Restore IoC tests dependencies
+      run: dotnet restore "./IoC_tests"
+      
+    - name: Build Main Project
       run: dotnet build "./stellar_combat" --no-restore
+      
     - name: Build tests
       run: dotnet build "./stellar_combat_tests" --no-restore
+      
     - name: Test
       run: dotnet test "./stellar_combat_tests" --no-build --verbosity normal
+      
+    - name: Build IoC project
+      run: dotnet build "./IoC" --no-restore
+      
+    - name: Build IoC tests
+      run: dotnet build "./IoC_tests" --no-restore
+      
+    - name: Test
+      run: dotnet test "./IoC_tests" --no-build --verbosity normal

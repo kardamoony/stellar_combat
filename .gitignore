@@ -7,6 +7,13 @@ stellar_combat/bin/Debug/net6.0/stellar_combat.pdb
 stellar_combat/bin/Debug/net6.0/stellar_combat.runtimeconfig.json
 stellar_combat/bin/Debug/net6.0/stellar_combat.deps.json
 
+IoC/bin/Debug/net6.0/ioc.deps.json
+IoC/bin/Debug/net6.0/ioc.pdb
+IoC/obj
+
+IoC_tests/bin
+IoC_tests/obj
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
