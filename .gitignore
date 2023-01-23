@@ -14,6 +14,8 @@ IoC/obj
 IoC_tests/bin
 IoC_tests/obj
 
+source_generator/obj
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml

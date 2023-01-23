@@ -1,4 +1,5 @@
 ﻿using IoC;
+using IoC.Commands;
 using IoC.Interfaces;
 using NUnit.Framework;
 
@@ -7,6 +8,12 @@ namespace UnitTests;
 [TestFixture]
 public class ContainerTests
 {
+    [SetUp]
+    public void BeforeTest()
+    {
+        new SetupContainerResolveStrategyCmd(Container.GetDefaultStrategy).Execute();
+    }
+    
     private static object TestStrategy(string key, params object[] args)
     {
         return "TestStrategy";
