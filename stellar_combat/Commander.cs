@@ -1,25 +1,36 @@
 ﻿using IoC.Interfaces;
+using StellarCombat.CommandQueues;
 using StellarCombat.Interfaces;
 
 namespace StellarCombat
 {
-    public sealed class Commander
+    public sealed class Commander : ICommander
     {
-        private readonly Queue<ICommand> _commandQueue = new Queue<ICommand>();
         private readonly ICommandExceptionHandler _exceptionHandler;
-
         private bool _executingQueue;
-        private List<ICommand> _pendingCommandsList = new List<ICommand>();
+        
+        private Func<bool> _queueLifetimeRule;
 
+        public ICommandQueue Queue { get; }
+        public List<ICommand> PendingCommands { get; } = new List<ICommand>();
+        
         public Commander(ICommandExceptionHandler exceptionHandler)
         {
+            Queue = new CommandQueue();
+            _exceptionHandler = exceptionHandler;
+            _exceptionHandler.Commander = this;
+        }
+
+        public Commander(ICommandExceptionHandler exceptionHandler, ICommandQueue queue)
+        {
+            Queue = queue;
             _exceptionHandler = exceptionHandler;
             _exceptionHandler.Commander = this;
         }
 
         public void ExecuteNext()
         {
-            var cmd = _commandQueue.Dequeue();
+            var cmd = Queue.Dequeue();
                 
             try
             {
@@ -35,8 +46,10 @@ namespace StellarCombat
         {
             if (_executingQueue) return;
             _executingQueue = true;
+
+            SetQueueLifetimeRule(DefaultQueueLifetimeRule);
             
-            while (_commandQueue.Count > 0)
+            while (_queueLifetimeRule.Invoke())
             {
                 ExecuteNext();
             }
@@ -49,34 +62,44 @@ namespace StellarCombat
         {
             if (_executingQueue)
             {
-                _pendingCommandsList.AddRange(args);
+                PendingCommands.AddRange(args);
                 return;
             }
             
             foreach (var cmd in args)
             {
-                _commandQueue.Enqueue(cmd);
+                Queue.Enqueue(cmd);
             }
         }
 
         public bool IsInQueue(ICommand command)
         {
-            return _commandQueue.Contains(command);
+            return Queue.Contains(command);
         }
         
         public bool IsInQueue(Func<ICommand, bool> func)
         {
-            return _commandQueue.FirstOrDefault(func.Invoke) != null;
+            return Queue.Contains(func);
+        }
+
+        public void SetQueueLifetimeRule(Func<bool> func)
+        {
+            _queueLifetimeRule = func;
         }
 
         private void EnqueuePending()
         {
-            foreach (var cmd in _pendingCommandsList)
+            foreach (var cmd in PendingCommands)
             {
-                _commandQueue.Enqueue(cmd);
+                Queue.Enqueue(cmd);
             }
             
-            _pendingCommandsList.Clear();
+            PendingCommands.Clear();
+        }
+
+        private bool DefaultQueueLifetimeRule()
+        {
+            return Queue.Count > 0;
         }
     }
 }

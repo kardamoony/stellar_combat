@@ -10,11 +10,11 @@ namespace StellarCombat.ExceptionHandling.Handlers
         private readonly Dictionary<Type, int> _exceptionsOccurrence = new Dictionary<Type, int>();
         private readonly ICommandExceptionHandler _handler;
 
-        private Commander _commander;
+        private ICommander _commander;
         
         public TextWriter TextWriter { get; }
 
-        public Commander Commander
+        public ICommander Commander
         {
             get => _commander;
             set => SetCommander(value);
@@ -61,7 +61,7 @@ namespace StellarCombat.ExceptionHandling.Handlers
             TextWriter.Dispose();
         }
         
-        private void SetCommander(Commander commander)
+        private void SetCommander(ICommander commander)
         {
             _commander = commander;
             _handler.Commander = commander;

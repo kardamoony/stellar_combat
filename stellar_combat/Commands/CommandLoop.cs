@@ -1,14 +1,15 @@
 ﻿using IoC.Interfaces;
+using StellarCombat.Interfaces;
 
 namespace StellarCombat.Commands
 {
     //Repeat command for "Command" assignment (lecture #8)
     public class CommandLoop : ICommand
     {
-        private readonly Commander _commander;
+        private readonly ICommander _commander;
         private readonly ICommand[] _commands;
 
-        public CommandLoop(Commander commander, params ICommand[] args)
+        public CommandLoop(ICommander commander, params ICommand[] args)
         {
             _commander = commander;
             _commands = args;
