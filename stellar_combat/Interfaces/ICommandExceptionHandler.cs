@@ -4,7 +4,7 @@ namespace StellarCombat.Interfaces
 {
     public interface ICommandExceptionHandler
     {
-        Commander Commander { set; }
+        ICommander Commander { set; }
         void Handle(ICommand command, Exception exception);
     }
 }

@@ -1,14 +1,15 @@
 ﻿using IoC.Interfaces;
+using StellarCombat.Interfaces;
 
 namespace StellarCombat.Commands
 {
     //Macro command for "SOLID and Exception Hanlding" assignment (lecture #7)
     public class Macro : ICommand
     {
-        private readonly Commander _commander;
+        private readonly ICommander _commander;
         private readonly IEnumerable<ICommand> _commands;
 
-        public Macro(Commander commander, params ICommand[] args)
+        public Macro(ICommander commander, params ICommand[] args)
         {
             if (args == null)
             {
