@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using IoC.Interfaces;
 using StellarCombat.Extensions;
 using StellarCombat.Interfaces;
 

@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="ioc">
+      <HintPath>..\IoC\bin\Debug\net6.0\ioc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

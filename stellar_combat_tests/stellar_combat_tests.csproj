@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="ioc">
+      <HintPath>..\IoC\bin\Debug\net6.0\ioc.dll</HintPath>
+    </Reference>
     <Reference Include="stellar_combat">
       <HintPath>..\stellar_combat\bin\Debug\net6.0\stellar_combat.dll</HintPath>
     </Reference>

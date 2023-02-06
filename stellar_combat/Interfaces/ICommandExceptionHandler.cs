@@ -1,4 +1,6 @@
-﻿namespace StellarCombat.Interfaces
+﻿using IoC.Interfaces;
+
+namespace StellarCombat.Interfaces
 {
     public interface ICommandExceptionHandler
     {

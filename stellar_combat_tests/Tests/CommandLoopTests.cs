@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using IoC.Interfaces;
+using Moq;
 using NUnit.Framework;
 using StellarCombat;
 using StellarCombat.Commands;

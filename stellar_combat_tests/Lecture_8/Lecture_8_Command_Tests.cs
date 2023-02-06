@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using IoC.Interfaces;
 using Moq;
 using NUnit.Framework;
 using StellarCombat;

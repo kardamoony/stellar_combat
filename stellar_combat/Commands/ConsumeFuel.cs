@@ -1,4 +1,5 @@
-﻿using StellarCombat.Interfaces;
+﻿using IoC.Interfaces;
+using StellarCombat.Interfaces;
 
 namespace StellarCombat.Commands
 {

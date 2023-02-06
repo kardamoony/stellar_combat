@@ -1,4 +1,4 @@
-﻿using StellarCombat.Interfaces;
+﻿using IoC.Interfaces;
 
 namespace StellarCombat.ExceptionHandling.Exceptions
 {
