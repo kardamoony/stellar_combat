@@ -1,9 +1,12 @@
-﻿using NUnit.Framework;
+﻿using System.Text;
+using Newtonsoft.Json;
+using NUnit.Framework;
 using StaticHelpers;
 using StellarCombat;
 using StellarCombat.Commands;
 using StellarCombat.Interfaces;
 using StellarCombat.Messaging;
+using StellarCombat.Messaging.Messages;
 
 [TestFixture]
 public class MessageEndpointTests : MessagingTests
@@ -58,5 +61,11 @@ public class MessageEndpointTests : MessagingTests
         var msg = MockingHelper.GetMockedMessage(sessionId, objectId, commandId);
 
         Assert.Throws<Exception>(() => _endpoint.ProcessMessage(msg));
+    }
+
+    [Test]
+    public void Endpoint_ValidateNullMessage_ReturnsFalse()
+    {
+        Assert.IsFalse(_endpoint.ValidateMessage(null));
     }
 }

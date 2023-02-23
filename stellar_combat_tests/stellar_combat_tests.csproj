@@ -17,6 +17,9 @@
     <Reference Include="stellar_combat_agent">
       <HintPath>..\stellar_combat_agent\obj\Debug\net6.0\stellar_combat_agent.dll</HintPath>
     </Reference>
+    <Reference Include="stellar_combat_authorization">
+      <HintPath>..\stellar_combat_authorization\bin\Debug\net6.0\stellar_combat_authorization.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +29,10 @@
     <PackageReference Include="NUnit.Console" Version="3.16.0" />
     <PackageReference Include="NUnit.ConsoleRunner" Version="3.16.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Utilities" />
   </ItemGroup>
 
 </Project>

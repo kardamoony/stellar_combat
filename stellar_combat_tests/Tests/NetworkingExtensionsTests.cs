@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using StaticHelpers;
 using StellarCombat.Extensions;
 
 [TestFixture]
@@ -21,7 +21,7 @@ public class NetworkingExtensionsTests
     public void Deserialize_SimpleObject_ReturnsObject()
     {
         var testObject = new SimpleSerializable { StringValue = "Name", IntValue = 42};
-        var bytes = ObjectToBytes(testObject);
+        var bytes = NetworkingHelper.ObjectToBytes(testObject);
 
         var deserialized = bytes.Deserialize<SimpleSerializable>();
         
@@ -32,7 +32,7 @@ public class NetworkingExtensionsTests
     public void Deserialize_ComplexObject_ReturnsObject()
     {
         var testObject = new ComplexSerializable();
-        var bytes = ObjectToBytes(testObject);
+        var bytes = NetworkingHelper.ObjectToBytes(testObject);
 
         var deserialized = bytes.Deserialize<ComplexSerializable>();
         
@@ -43,7 +43,7 @@ public class NetworkingExtensionsTests
     public void Deserialize_Null_ReturnsNull()
     {
         SimpleSerializable testObject = null;
-        var bytes = ObjectToBytes(testObject);
+        var bytes = NetworkingHelper.ObjectToBytes(testObject);
 
         var deserialized = bytes.Deserialize<SimpleSerializable>();
         
@@ -54,16 +54,10 @@ public class NetworkingExtensionsTests
     public void Deserialize_WrongType_ReturnsNull()
     {
         SimpleSerializable testObject = null;
-        var bytes = ObjectToBytes(testObject);
+        var bytes = NetworkingHelper.ObjectToBytes(testObject);
 
         var deserialized = bytes.Deserialize<ComplexSerializable>();
         
         Assert.IsTrue(deserialized == null);
-    }
-    
-    private byte[] ObjectToBytes(object obj)
-    {
-        var jsonStr = JsonConvert.SerializeObject(obj);
-        return System.Text.Encoding.UTF8.GetBytes(jsonStr);
     }
 }
