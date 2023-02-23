@@ -1,6 +1,7 @@
 ﻿using StellarCombat.Commands;
 using StellarCombat.Extensions;
 using StellarCombat.Interfaces;
+using StellarCombat.Messaging.Messages;
 
 namespace StellarCombat.Messaging
 {
@@ -15,13 +16,23 @@ namespace StellarCombat.Messaging
 
         public void Receive(byte[] data)
         {
-            ProcessMessage(data.Deserialize<IMessage>());
+            var message = data.Deserialize<NetworkMessage>();
+
+            if (ValidateMessage(message))
+            {
+                ProcessMessage(message);
+            }
         }
 
         public void ProcessMessage(IMessage message)
         {
             var commander = GetSession(message.SessionId);
             commander.Enqueue(new MessageInterpret(commander, message));
+        }
+
+        public bool ValidateMessage(IMessage? message)
+        {
+            return message?.ValidateToken() ?? false;
         }
 
         public ICommander GetSession(uint id)

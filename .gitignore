@@ -23,6 +23,13 @@ stellar_combat_agent/bin/Debug/net6.0/stellar_combat_agent.pdb
 stellar_combat_agent/bin/Debug/net6.0/stellar_combat_agent.runtimeconfig.json
 stellar_combat_agent/bin/Debug/net6.0/stellar_combat.pdb
 
+stellar_combat_authorization/obj
+stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.deps.json
+stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.exe
+stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.pdb
+stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.runtimeconfig.json
+stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.pdb
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
