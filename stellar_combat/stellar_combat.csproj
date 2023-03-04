@@ -15,9 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\source_generator\source_generator.csproj"
-                      OutputItemType="Analyzer"
-                      ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\source_generator\source_generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3-beta1" />
   </ItemGroup>
 
