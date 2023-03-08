@@ -8,15 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="ioc">
-      <HintPath>..\IoC\bin\Debug\net6.0\ioc.dll</HintPath>
-    </Reference>
-    <Reference Include="stellar_combat">
-      <HintPath>..\stellar_combat\obj\Debug\net6.0\stellar_combat.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Commands" />
     <Folder Include="Interfaces" />
     <Folder Include="Messaging" />
@@ -24,6 +15,10 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3-beta1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\stellar_combat\stellar_combat.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,12 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="ioc">
-      <HintPath>..\IoC\bin\Debug\net6.0\ioc.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\IoC\IoC.csproj" />
     <ProjectReference Include="..\source_generator\source_generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3-beta1" />
   </ItemGroup>

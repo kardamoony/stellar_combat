@@ -8,21 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="ioc">
-      <HintPath>..\IoC\bin\Debug\net6.0\ioc.dll</HintPath>
-    </Reference>
-    <Reference Include="stellar_combat">
-      <HintPath>..\stellar_combat\bin\Debug\net6.0\stellar_combat.dll</HintPath>
-    </Reference>
-    <Reference Include="stellar_combat_agent">
-      <HintPath>..\stellar_combat_agent\obj\Debug\net6.0\stellar_combat_agent.dll</HintPath>
-    </Reference>
-    <Reference Include="stellar_combat_authorization">
-      <HintPath>..\stellar_combat_authorization\bin\Debug\net6.0\stellar_combat_authorization.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
     <PackageReference Include="Moq" Version="4.18.3" />
     <PackageReference Include="NUnit" Version="3.13.3" />
@@ -32,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Utilities" />
+    <ProjectReference Include="..\IoC\IoC.csproj" />
+    <ProjectReference Include="..\stellar_combat\stellar_combat.csproj" />
+    <ProjectReference Include="..\stellar_combat_authorization\stellar_combat_authorization.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,13 +2,9 @@ stellar_combat_tests/bin
 stellar_combat_tests/obj
 
 stellar_combat/obj
-stellar_combat/bin/Debug/net6.0/stellar_combat.exe
-stellar_combat/bin/Debug/net6.0/stellar_combat.pdb
-stellar_combat/bin/Debug/net6.0/stellar_combat.runtimeconfig.json
-stellar_combat/bin/Debug/net6.0/stellar_combat.deps.json
+stellar_combat/bin
 
-IoC/bin/Debug/net6.0/ioc.deps.json
-IoC/bin/Debug/net6.0/ioc.pdb
+IoC/bin
 IoC/obj
 
 IoC_tests/bin
@@ -17,18 +13,10 @@ IoC_tests/obj
 source_generator/obj
 
 stellar_combat_agent/obj
-stellar_combat_agent/bin/Debug/net6.0/stellar_combat_agent.deps.json
-stellar_combat_agent/bin/Debug/net6.0/stellar_combat_agent.exe
-stellar_combat_agent/bin/Debug/net6.0/stellar_combat_agent.pdb
-stellar_combat_agent/bin/Debug/net6.0/stellar_combat_agent.runtimeconfig.json
-stellar_combat_agent/bin/Debug/net6.0/stellar_combat.pdb
+stellar_combat_agent/bin
 
 stellar_combat_authorization/obj
-stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.deps.json
-stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.exe
-stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.pdb
-stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.runtimeconfig.json
-stellar_combat_authorization/bin/Debug/net6.0/stellar_combat_authorization.pdb
+stellar_combat_authorization/bin
 
 # User-specific stuff
 .idea/**/workspace.xml

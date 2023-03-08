@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <RootNamespace>stellar_combat_authentication</RootNamespace>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.27.0" />
   </ItemGroup>

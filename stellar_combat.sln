@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stellar_combat", "stellar_combat\stellar_combat.csproj", "{DD237B5E-CA9C-4B98-8BE6-3E78E3155B70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stellar_combat_tests", "stellar_combat_tests\stellar_combat_tests.csproj", "{3BE911AB-539F-411D-800F-173AC3FC5526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC", "IoC\IoC.csproj", "{131B753C-9976-48C2-AE60-79F31E16E9C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC_tests", "IoC_tests\IoC_tests.csproj", "{C8B1B665-6AA0-46F9-B712-21CCB0027E7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stellar_combat_agent", "stellar_combat_agent\stellar_combat_agent.csproj", "{38C14839-8E91-48A5-B3C9-3439398DABBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stellar_combat_authorization", "stellar_combat_authorization\stellar_combat_authorization.csproj", "{7DC26339-0952-4AF4-ACFD-7A601577CB65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "source_generator", "source_generator\source_generator.csproj", "{0959A465-190E-446D-BBA4-862271CD4E18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD237B5E-CA9C-4B98-8BE6-3E78E3155B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD237B5E-CA9C-4B98-8BE6-3E78E3155B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD237B5E-CA9C-4B98-8BE6-3E78E3155B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD237B5E-CA9C-4B98-8BE6-3E78E3155B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE911AB-539F-411D-800F-173AC3FC5526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE911AB-539F-411D-800F-173AC3FC5526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE911AB-539F-411D-800F-173AC3FC5526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE911AB-539F-411D-800F-173AC3FC5526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131B753C-9976-48C2-AE60-79F31E16E9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131B753C-9976-48C2-AE60-79F31E16E9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131B753C-9976-48C2-AE60-79F31E16E9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131B753C-9976-48C2-AE60-79F31E16E9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8B1B665-6AA0-46F9-B712-21CCB0027E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B1B665-6AA0-46F9-B712-21CCB0027E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B1B665-6AA0-46F9-B712-21CCB0027E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B1B665-6AA0-46F9-B712-21CCB0027E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C14839-8E91-48A5-B3C9-3439398DABBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C14839-8E91-48A5-B3C9-3439398DABBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C14839-8E91-48A5-B3C9-3439398DABBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C14839-8E91-48A5-B3C9-3439398DABBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC26339-0952-4AF4-ACFD-7A601577CB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC26339-0952-4AF4-ACFD-7A601577CB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC26339-0952-4AF4-ACFD-7A601577CB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC26339-0952-4AF4-ACFD-7A601577CB65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0959A465-190E-446D-BBA4-862271CD4E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0959A465-190E-446D-BBA4-862271CD4E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0959A465-190E-446D-BBA4-862271CD4E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0959A465-190E-446D-BBA4-862271CD4E18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
