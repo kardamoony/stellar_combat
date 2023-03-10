@@ -7,10 +7,11 @@ stellar_combat/bin
 IoC/bin
 IoC/obj
 
-IoC_tests/bin
 IoC_tests/obj
+IoC_tests/bin
 
 source_generator/obj
+source_generator/bin
 
 stellar_combat_agent/obj
 stellar_combat_agent/bin
@@ -24,6 +25,7 @@ stellar_combat_authorization/bin
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+*DotSettings.user
 
 # AWS User-specific
 .idea/**/aws.xml
